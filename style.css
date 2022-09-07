@@ -51,7 +51,7 @@ header {
 /**/
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 
@@ -144,11 +144,11 @@ section {
 }
 
 .development__list > a {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: white;
     padding: 1em 2em;
-    margin: 1em;
+    margin: 0.5em;
     background: linear-gradient(45deg, coral, green);
     border: 1px solid green;
     border-radius: 1em;
@@ -174,10 +174,18 @@ section {
 
 .widget {
     position: fixed;
-    top: 50%;
+    top: 60%;
     left: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 2em 1em;
     background: linear-gradient(45deg, yellow, green)
+}
+
+.widget > div:nth-of-type(1) {
+    display: flex;
+    justify-content: space-between;
 }
 
 

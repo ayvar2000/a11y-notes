@@ -173,15 +173,15 @@
                         examples and in a separate section.
                     </p>
 
-                    <h4 class="text-card__title">page language and changes</h4>
-                    <p>
+                    <h4 id="lang" class="text-card__title">page language</h4>
+                    <p class="text-card__text">
                         Indicate the primary language of every page by using the lang attribute in the HTML tag, for
                         example html lang="en". Use the lang attribute on specific elements when the language of
                         the element differs from the rest of the page. This will help screen readers pronounce the
                         content more accurately.
                     </p>
-                    <h4>provide title</h4>
-                    <p>
+                    <h4 id="title">provide title</h4>
+                    <p class="text-card__text">
                         The title element, contained in the document's head element, is often the first piece of
                         information announced by assistive technology. That’s why it is important to provide an accurate
                         and concise title to describe the page's purpose.
@@ -194,8 +194,8 @@
                         to the name of a website before the unique page title, for every page a user navigates to in the
                         same website.
                     </p>
-                    <h4 class="text-card__title">Use mark-up to convey content meaning and structure</h4>
-                    <p>
+                    <h4 id="markup" class="text-card__title">Use mark-up to convey content meaning and structure</h4>
+                    <p class="text-card__text">
                         When writing about headings, we briefly touched the document structure by discussing
                         headings, and how to correctly use it to define content. When structuring the webpage, we are
                         defining content, navigation and accessibility through landmarks - special regions on the page to
@@ -213,9 +213,9 @@
                         Roles can provide additional meaning, for example, using role="search" to identify search
                         functionality, or having an ul element can be accessed by giving role=”list”.
                     </p>
-                    <h4 class="text-card__title">form control</h4>
+                    <h4 id="form" class="text-card__title">form control</h4>
                         <h5>label element</h5>
-                        <p>
+                        <p class="text-card__text">
                             Label element
                             Forms and inputs of different type allow user interaction with the website, which is why every
                             input must be well-defined in order for user to understand what’s required.
@@ -259,7 +259,7 @@
                             However, in this case, ARIA label can provide an invisible label, if a visible label cannot be used.
                         </p>
                         <h5>input element</h5>
-                        <p>
+                        <p class="text-card__text">
                             Thanks to its type attribute, input element is versatile in providing different information, such as
                             date, e-mail, password, color, range and much, much more – see the list:
                             https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
@@ -275,8 +275,8 @@
                             of 44×44 pixels, or the equivalent CSS measure, is recommended.
                         </p>
 
-                    <h4 class="text-card__title">buttons</h4>
-                    <p>
+                    <h4 id="buttons" class="text-card__title">buttons</h4>
+                    <p class="text-card__text">
                         Buttons are clickable elements that trigger a response when activated by user. Any element can
                         have role=”button”, which tells screen reader an element is a button. This, however, does not
                         provide out-of-the-box button functionality, such as submitting the form, etc.
@@ -289,8 +289,8 @@
                         purpose and function of the button are communicated to the user, and the assistive technology
                         is not overflooded by extra information
                     </p>
-                    <h4 class="text-card__title">images</h4>
-                    <p>
+                    <h4 id="images" class="text-card__title">images</h4>
+                    <p class="text-card__text">
                         Images must have text alternatives that describe the information or function represented by
                         them, and the WCAG lists the following purposes:
                         Informative images convey a simple concept or information that can be expressed in a short
@@ -326,8 +326,8 @@
                         our webcast, company’s logo in the upper left corner was wrapped in a tag and marked by
                         alt=”new tab”, whereas the aria-label instructed the user about functionality and purpose.
                     </p>
-                    <h4 class="text-card__title">ARIA</h4>
-                    <p>
+                    <h4 id="aria" class="text-card__title">ARIA</h4>
+                    <p class="text-card__text">
                         Accessibility is greatly improved by ARIA set of rules and attributes, some of it already
                         mentioned up in the previous examples. ARIA supplements HTML so that interactions and
                         widgets commonly used in applications can be passed to assistive technologies when there is
@@ -341,8 +341,8 @@
                         know that menu element was expanded and currently active, receiving focus. As mentioned,
                         aria-role=”presentation” can be an alternative in the presentation of decorative images,
                     </p>
-                    <h4 class="text-card__title">keyboard accessibility</h4>
-                    <p>
+                    <h4 id="keyboard" class="text-card__title">keyboard accessibility</h4>
+                    <p class="text-card__text">
                         By default, only the interactive elements of a website or application are keyboard-accessible get
                         focused when using TAB key. With the tabindex, authors can make other elements focusable, too.
                         When set to 0, the element becomes focusable by keyboard and script. When set to -1, the
@@ -361,7 +361,7 @@
                         event was added.
                     </p>
                     <h5>keyboard traps</h5>
-                    <p>
+                    <p class="text-card__text">
                         If a keyboard user is stuck within a component, with no means to exit the component focus with
                         a standard keyboard only and continue on to other interactive elements, it is called keyboard
                         trap.
@@ -392,14 +392,14 @@
                 </div>
 
                 <div class="development__list">
-                    <a href="">page language and changes</a>
-                    <a href="">title</a>
-                    <a href="">markup</a>
-                    <a href="">form control</a>
-                    <a href="">buttons</a>
-                    <a href="">images</a>
-                    <a href="">ARIA</a>
-                    <a href="keyboard">keyboard accessibility</a>
+                    <a href="#lang">page language and changes</a>
+                    <a href="#title">title</a>
+                    <a href="#markup">markup</a>
+                    <a href="#form">form control</a>
+                    <a href="#buttons">buttons</a>
+                    <a href="#images">images</a>
+                    <a href="#aria">ARIA</a>
+                    <a href="#keyboard">keyboard accessibility</a>
                 </div>
 
                 <div class="development__code">
@@ -412,17 +412,20 @@
             <img src="./src/a11y.png" alt="widget"/>
         </button>
         <aside id="widget" class="widget hidden">
-            <div class="widget__font-size active">
-                <button>&minus;</button>
+            <button id="widget-font">change font size</button>
+            <div class="widget__font-size hidden">
+                <button id="decrement">&minus;</button>
                 <p>font size</p>
-                <button>&plus;</buttton>
+                <button id="increment">&plus;</buttton>
             </div>
-            <div class="widget__line-height">
-                <button>&minus;</button>
+            <button id="widget-line">change line height</button>
+            <div class="widget__line-height hidden">
+                <button id="decrement">&minus;</button>
                 <p>line spacing</p>
-                <button>&plus;</buttton>
+                <button id="increment">&plus;</buttton>
             </div>
-            <div class="widget__color">
+            <button id="widget-color">change colors</button>
+            <div class="widget__color hidden">
                 <button>&minus;</button>
                 <p>color</p>
                 <button>&plus;</buttton>
