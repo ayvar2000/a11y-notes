@@ -1,7 +1,15 @@
-const about = ['link1', 'link2', 'link3']
-const implement = ['link4', 'link5', 'link6']
+const navBarBtn = document.getElementById('navbar-btn')
+
+
+
+const about = ['https://www.w3.org/WAI/fundamentals/accessibility-intro/', 'https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility', 'https://en.wikipedia.org/wiki/Web_accessibility', 'https://www.w3.org/WAI/fundamentals/accessibility-principles/']
+const implement = ['link4', 'https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility#implementing_accessibility_into_your_project', 'https://www.w3.org/WAI/fundamentals/components/']
 const content = ['link1', 'link2', 'link3']
 const design = ['link1', 'link2', 'link3']
+
+dev = ['https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML', 'https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript']
+
+let resourcesList = document.getElementById('resources-list')
 
 let assignToList = function(array){
     for(let i = 0; i < array.length; i++) {
@@ -9,6 +17,29 @@ let assignToList = function(array){
         console.log('arr', arrayItem)
     }
 }
+
+
+console.log('res', resourcesList)
+
+const fillResources = ()=> {
+    if(window.location.hash === '#about') {
+        console.log('je men')
+        about.forEach((element)=> {
+            let link = document.createElement('a')
+            link.innerText = 'alo ba'
+            link.setAttribute('href', `${element}`)
+            let li = document.createElement('li')
+            li.setAttribute('class', 'salmon')
+            li.appendChild(link)
+            resourcesList.appendChild(li)
+        })
+    }
+}
+
+
+console.log(window.location.hash)
+
+fillResources()
 
 assignToList(about)
 

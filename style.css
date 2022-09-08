@@ -54,15 +54,25 @@ header {
     display: none !important;
 }
 
+/* C O L O R   S C H E M E S*/
 
-/* navigation */
-
-.btn-navbar {
-    color: purple;
-    background-color:antiquewhite;
-    padding: 1em 2em;
+.yellow {
+    color: #060447;
+    background-color: #FFC163;
 }
 
+.salmon {
+    color: #3C377A;
+    background-color: #bf7e5d;
+}
+
+.crimson {
+    color: #CCC0C1;
+    background-color: #7D2237;
+}
+
+
+/* navigation */
 
 .nav__list {
     list-style: none;
@@ -77,16 +87,24 @@ header {
     height: fit-content;
 }
 
-
-
 .nav__img {
     max-height: 4em;
     width: 100%;
 }
 
+.dev-btn {
+    margin: 1em;
+}
+
 main {
+    position: relative;
     display: flex;
     flex-direction: column;
+}
+
+figure {
+    position: absolute;
+
 }
 
 section {
