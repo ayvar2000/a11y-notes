@@ -47,6 +47,7 @@ body {
 header {
     height: 8vh;
     background-color: rgb(46, 150, 17);
+    grid-area: header;
 }
 
 .hidden {
@@ -58,6 +59,7 @@ header {
     display: flex;
     justify-content: space-around;
     padding: 1rem 0;
+    grid-area: nav;
 }
 
 .nav__list--btn {
@@ -81,6 +83,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
+    grid-area: main;
 }
 
 section {
@@ -89,6 +92,7 @@ section {
     margin: 1rem;
     padding: 1rem;
     border: 1px solid green;
+    grid-area: content;
 }
 
 .text-card, .sources-card {
@@ -125,6 +129,7 @@ section {
     margin: 1em;
     padding: 1em;
     border-radius: 1em;
+    grid-area: dev;
 }
 
 .development__list {
@@ -185,4 +190,16 @@ section {
 footer {
     height: 5vh;
     background-color: rgb(46, 150, 17);
+    grid-area: 'footer';
+}
+
+body.mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    header,
+    nav,
+    main,
+    dev,
+    footer;
 }

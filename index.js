@@ -36,6 +36,20 @@ const fillResources = ()=> {
     }
 }
 
+const computedStyles = getComputedStyle(document.documentElement)
+const rem = parseFloat(computedStyles.fontSize)
+const mobilePoint = 50 * rem
+
+
+
+window.addEventListener('resize', ()=> {
+    if (window.innerWidth < mobilePoint) {
+        document.body.classList.add('mobile')
+    } else {
+        document.body.classList.remove('mobile')
+    }
+})
+
 
 console.log(window.location.hash)
 
