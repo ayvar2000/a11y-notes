@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>accessibility notes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Accessibility - notes</h1>
+            <select>
+
+            </select>
+        </header>
+        <nav>
+            <ul class="nav__list" role="navigation">
+                <li role="navigation item" tooltip="What is accessibility?">
+                    <a href="#about" class="nav__list--btn">
+                        <img src="./src/a11y.png" alt="accessibility symbol" class="nav__img"/>
+                    </a>
+                </li>
+                <li role="navigation item">
+                    <a href="#implement"class="nav__list--btn">
+                        <img src="./src/implement.png" alt="implementing accessibility" class="nav__img"/>
+                    </a> 
+                </li>
+                <li role="navigation item">
+                    <a href="#content" class="nav__list--btn">
+                        <img src="./src/writing.png" alt="implementing accessibility" class="nav__img"/>
+                    </a> 
+                </li>
+                <li role="navigation item">
+                    <a href="#design" class="nav__list--btn">
+                        <img src="./src/design.png" alt="implementing accessibility" class="nav__img"/>
+                    </a> 
+                </li>
+                <li>
+                    <button id="development" class="nav__list--btn dev-btn">
+                        <img src="./src/dev.png" alt="implementing accessibility" class="nav__img"/>
+                    </button> 
+                </li>
+            </ul>
+
+        </nav>
+
+        <main>
+
+            <section class="content">
+                <div class="text-card">
+                    <h3 id="about" class="text-card__title">what is accessibility</h3>
+                        <p class="text-card__text">
+                            Accessibility defines the standards and practices used to make websites easier to navigate and
+                            use for people with disabilities, so they can perceive, understand, navigate, and interact with the
+                            web.
+                            Not being able to use web, or not to use it in full capacity and contribute, creates further
+                            disadvantages for such people. Creating websites that are not inclusive deprives them of
+                            participating in many important topics, such as job search and applications, communication and
+                            support, many online services such as learning, ordering, dating and so on.
+                            Disabilities include visual, auditory, physical, speech, cognitive, motoric, language, learning and
+                            neurological. Accessibility also includes the conditions that are not disabilities, but are result of
+                            aging, such as low vision, memory loss and reduced motoric. There are also temporary and
+                            situational disadvantages for the visitors and users, such as using phone in public transport,
+                            bright sunlight, slow bandwidth, broken arm or lost glasses – all these should be taken into
+                            account.
+                            This article aims to provide short and understandable introduction to accessibility, its purpose
+                            and principles. The first section touches upon basic requirements in design and writing,
+                            whereas the second expands upon development for accessibility, with examples,
+                            recommendations and best practices. This article is not comprehensive guide or in-depth
+                            analysis of the topic of accessibility, but the links for the extra literature will be provided.
+                        </p>
+
+                    <h3 id="implement" class="text-card__title">implementing accessibility</h3>
+                        <p class="text-card__text">
+                            When developing a website, it is important to implement accessibility from the start. It should be
+                            thought of when structuring our content, designing prototypes, spacing and color schemes,
+                            writing headings, structuring the page navigation and correct usage and labeling of HTML
+                            elements. Just by structuring our website content carefully and using correct HTML elements,
+                            we can already greatly improve website’s accessibility.
+                            There are three levels of accessibility compliance in the Web Content Accessibility Guidelines
+                            (WCAG):
+                            A: essential - If this isn't met, assistive technology may not be able to read, understand, or fully
+                            operate the page or view.
+                            AA: ideal support – required for government and public body websites.
+                            AAA: specialized support - typically reserved for parts of websites and web apps that serve a
+                            specialized audience.
+                            This guide and the practices described in it strive for AA compliance, providing ideal support to
+                            disadvantaged users.
+                        </p>
+                    <h3 id="content" class="text-card__title">content and writing</h3>
+                        <p class="text-card__text">
+                            Content is the most important part of the website.
+    
+                            Well-structured document outline enables smooth navigation of a website and its content.
+                            Heading elements are necessary in structuring the content and making it easily recognizable for
+                            the users and screen readers. Heading elements should not be used for purely visual purposes,
+                            but should be used to describe topic or purpose for the AA level of accessibility.
+                            It is recommended by W3C to have only one h1 element per page, which provides the user
+                            with general information about the page and content; other heading elements help users find
+                            specific content and orient themselves within the web page. We may also want to consider
+                            putting the most important information at the beginning of each heading. This helps users skim
+                            the headings to locate the specific content they need, and is especially helpful when browsers
+                            or assistive technology allow navigation from heading to heading.
+                            When structuring the document outline and its content, this example is useful to understand the
+                            headings and the sections of content the headings describe, as well as the role of h1
+                            element.
+                            When writing the heading and navigation content for h, button and a elements, we
+                            should make sure content is unique and descriptive; the information should be written in concise
+                            and understandable language.
+                            The instructions, guidance, and error messages must be clear, easy to understand, without
+                            unnecessarily technical language. Input requirements, such as name, date formats and so on
+                            should be properly described.
+                        </p>
+                    <h3 id="design" class="text-card__title">design</h3>
+                        <p class="text-card__text">
+                            When designing a webpage and UI, design should emphasize sufficient contrast between
+                            foreground and background. Foreground text needs to have sufficient contrast with background
+                            colors. This includes text on images, background gradients, buttons, and other elements. This
+                            does not apply for logos or incidental text, such as text that happens to be in a photograph.
+                            While color can be useful to convey information, color should not be the only way information is
+                            conveyed. When using color to differentiate elements, also provide additional identification that
+                            does not rely on color perception. For example, use an asterisk in addition to color to indicate
+                            required form fields, and use labels to distinguish areas on graphs.
+                            Use whitespace and proximity to make relationships between content more apparent. Style
+                            headings to group content, reduce clutter, and make it easier to scan and understand.
+                            Provide distinct styles for interactive elements, such as links and buttons, to make them easy to
+                            identify. For example, change the appearance of links on mouse hover, keyboard focus, and
+                            touch-screen activation. Ensure that styles and naming for interactive elements are used
+                            consistently throughout the website.
+                            Ensure that navigation across pages within a website has consistent naming, styling, and
+                            positioning. Provide more than one method of website navigation, such as a site search or a site
+                            map. Help users understand where they are in a website or page by providing orientation cues,
+                            such as breadcrumbs and clear headings.
+                            Ensure that all fields have a descriptive label adjacent to the field. For left-to-right languages,
+                            labels are usually positioned to the left or above the field, except for checkboxes and radio
+                            buttons where they are usually to the right. Avoid having too much space between labels and
+                            fields.
+                            Provide feedback for interactions, such as confirming form submission, alerting the user when
+                            something goes wrong, or notifying the user of changes on the page. Instructions should be
+                            easy to identify. Important feedback that requires user action should be presented in a
+                            prominent style.
+
+                            Consider how page information is presented in different sized viewports, such as mobile phones
+                            or zoomed browser windows. Position and presentation of main elements, such as header and
+                            navigation can be changed to make best use of the space. Ensure that text size and line width
+                            are set to maximize readability and legibility.
+                        </p>
+                </div>
+                    <div class="sources-card">
+                        <button>check sources</button>
+                        <ul id="resources-list">
+                        
+                        </ul>
+                    </div>
+            </section>
+
+            <section class="development hidden">
+                <div class="text-card">
+                    <h3 class="text-card__title">development - introduction</h3>
+                    <p class="text-card__text">
+                        As we noted before, introducing accessibility from the start helps us avoid the possible mess we
+                        can run into when trying to structure content, assign headings, ARIA roles, labels and improve
+                        keyboard accessibility in the later phases of development. Choosing the right HTML elements to
+                        use, structuring our HTML correctly and thinking about the flow of content in terms of landmarks
+                        accessed by user and their assistive technology, provides great accessibility points and saves
+                        us time and money in the mid to long term.
+                        This part of the article will cover recommended practices in development, as well as practical
+                        solutions implemented in our work.
+                        Important note: ARIA (Accessible Rich Internet Applications) is a set of roles and attributes
+                        assigned to HTML elements, that define ways to make web content and web applications
+                        (especially those developed with JavaScript) more accessible to people with disabilities. ARIA
+                        helps us greatly by making non-interactive HTML elements, such as div, interactive and
+                        responsive to assistive technology by giving it explicit roles or description in the structure and
+                        accessibility.
+                        Because ARIA is so helpful, it comes with important rule - If you can use a native HTML
+                        element, or an attribute with the required semantics and behavior already build in, do so.
+                        This avoids unnecessary re-purposing of HTML elements by adding ARIA labels and properties,
+                        allows for smoother accessibility, better structure and code maintenance.
+                        As we dive deeper in development practices for accessibility, we will expand on its use on the
+                        examples and in a separate section.
+                    </p>
+
+                    <h4 id="lang" class="text-card__title">page language</h4>
+                    <p class="text-card__text">
+                        Indicate the primary language of every page by using the lang attribute in the HTML tag, for
+                        example html lang="en". Use the lang attribute on specific elements when the language of
+                        the element differs from the rest of the page. This will help screen readers pronounce the
+                        content more accurately.
+                    </p>
+                    <h4 id="title">provide title</h4>
+                    <p class="text-card__text">
+                        The title element, contained in the document's head element, is often the first piece of
+                        information announced by assistive technology. That’s why it is important to provide an accurate
+                        and concise title to describe the page's purpose.
+                        A common navigation technique for users of assistive technology is to read the page title and
+                        infer the content the page contains. This is because navigating into a page to determine its
+                        content can be a time consuming and potentially confusing process. Titles should be unique to
+                        every page of a website, ideally surfacing the primary purpose of the page first, followed by the
+                        name of the website. Following this pattern will help ensure that the primary purpose of the page
+                        is announced by a screen reader first. This provides a far better experience than having to listen
+                        to the name of a website before the unique page title, for every page a user navigates to in the
+                        same website.
+                    </p>
+                    <h4 id="markup" class="text-card__title">Use mark-up to convey content meaning and structure</h4>
+                    <p class="text-card__text">
+                        When writing about headings, we briefly touched the document structure by discussing
+                        headings, and how to correctly use it to define content. When structuring the webpage, we are
+                        defining content, navigation and accessibility through landmarks - special regions on the page to
+                        which screen readers and other assistive technologies can jump.
+                        Using an appropriate mark-up with correct elements as landmarks will greatly improve the
+                        webpage navigation and screen reader accessibility.
+                        If HTML sectioning elements are used without understanding the associated landmark structure,
+                        assistive technology users will most likely be confused and less efficient in accessing content
+                        and interacting with web pages.
+                        HTML5 provides additional mark-up elements that define ARIA landmarks by default, and have
+                        an implicit role recognized by screen readers and assistive technologies. The most important
+                        and widely used elements are header, main, nav, aside and footer>, and using it, we
+                        can structure our HTML without the need to explicitly set up role attributes for each content
+                        section, because the assistive technology will recognize it.
+                        Roles can provide additional meaning, for example, using role="search" to identify search
+                        functionality, or having an ul element can be accessed by giving role=”list”.
+                    </p>
+                    <h4 id="form" class="text-card__title">form control</h4>
+                        <h5>label element</h5>
+                        <p class="text-card__text">
+                            Label element
+                            Forms and inputs of different type allow user interaction with the website, which is why every
+                            input must be well-defined in order for user to understand what’s required.
+                            The label element is used to define and explain input and input requirements to a user. It is
+                            linked to appropriate input by using a for attribute on the label element linked to the id
+                            attribute of the form element, or using attributes.
+                            Example: for and id attributes
+                            label for="username">Username label
+                            input id="username" type="text" name="username"
+                            In left-to-right languages, it is customary to visually position labels to the right of radio buttons
+                            and checkboxes, and to the left or directly above other form fields. Maintaining this practice
+                            increases predictability and understandability of your form for all users.
+                            If the design requires label element to be visually hidden, we should not set visibility: hidden or
+                            display: none as CSS properties, because the element will be hidden from the screen readers,
+                            too. In such cases, screen reader and our visitor will not be able to understand the required
+                            input and actions needed.
+                            One way to visually hide the label, but still make it accessible to screen readers is to use CSS
+                            class in a following or similar way (examples are from MDN and WCAG):
+
+                            .not-visible {
+                            position: absolute;
+                            left: -9999px;
+                            top: -9999px;
+                            }
+                            .visuallyhidden {
+                            border: 0;
+                            clip: rect(0 0 0 0);
+                            height: 1px;
+                            margin: -1px;
+                            overflow: hidden;
+                            padding: 0;
+                            position: absolute;
+                            width: 1px;
+                            }
+
+                            We can then append this class to the element we want to visually hide – for example, we want
+                            to label the following user input that takes plain text as input type:
+                            label for=’hidden-label’ class=”.not-visible” This label is not visible, but it can be accessed by
+                            screen reader label
+                            input name=”hidden-label’ id=”hidden-label” type=”text”
+                            However, in this case, ARIA label can provide an invisible label, if a visible label cannot be used.
+                        </p>
+                        <h5>input element</h5>
+                        <p class="text-card__text">
+                            Thanks to its type attribute, input element is versatile in providing different information, such as
+                            date, e-mail, password, color, range and much, much more – see the list:
+                            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+                            We have already seen the importance of label and correct labeling of the input elements in order
+                            to describe their functionality to user, and make it accessible to screen readers. However, we’ll
+                            note few more input properties that improve their accessibility, and one is the placeholder
+                            attribute (when input element is used to enter text, e.c. has type=”text” attribute).
+                            Using placeholder allows us to communicate the exact purpose of the input field to the screen
+                            reader, if no label or aria-label attribute has been set.
+                            Interactive elements such as form input should provide an area large enough that it is easy to
+                            activate them. This helps a variety of people, including people with motor control issues and
+                            people using non-precise forms of input such as a stylus or fingers. A minimum interactive size
+                            of 44×44 pixels, or the equivalent CSS measure, is recommended.
+                        </p>
+
+                    <h4 id="buttons" class="text-card__title">buttons</h4>
+                    <p class="text-card__text">
+                        Buttons are clickable elements that trigger a response when activated by user. Any element can
+                        have role=”button”, which tells screen reader an element is a button. This, however, does not
+                        provide out-of-the-box button functionality, such as submitting the form, etc.
+
+                        For that, we should use button element or input with a type=’button’. This way, it will be
+                        accessible by keyboard, the content of the button will be understood by screen readers, and its
+                        purpose and function to users. If the content of the button is an image or icon used for
+                        illustrative purposes, we may assign the aria-label attribute to a button itself, and use the empty
+                        alt tag in the image element, or the less-supported aria-role=”presentation”. This way, the
+                        purpose and function of the button are communicated to the user, and the assistive technology
+                        is not overflooded by extra information
+                    </p>
+                    <h4 id="images" class="text-card__title">images</h4>
+                    <p class="text-card__text">
+                        Images must have text alternatives that describe the information or function represented by
+                        them, and the WCAG lists the following purposes:
+                        Informative images convey a simple concept or information that can be expressed in a short
+                        phrase or sentence. The text alternative should convey the meaning or content that is displayed
+                        visually, which typically isn’t a literal description of the image. Some examples are:
+                        - simple and often seen, the telephone, email or fax icon – their alt tag should provide text
+                        alternative such as alt=”telephone number” or similar;
+                        - the image which shows a specific instruction on how to open a bottle; in this case, the info
+                        shown in the image should be described in the alt tag of the image, such as, for example,
+                        alt=”open the bottle by pressing down the cap and rotating to the left”;
+                        - if an image supplements the text with additional information, alt tag should convey this
+                        information without being redundant;
+                        - if an image expresses the emotion or the specific meaning in the context of a website, alt tag
+                        should communicate it – if a restaurant’s website has the image of a dog and the intent is to
+                        show that the dogs are welcome, the correct alt tag would be alt=’we are dog friendly’,and not,
+                        for example, ‘an image of a black-and-white border collie’;
+                        - images conveying file format should have an alt tag with the file format communicated;
+                        Ensure that alternative text for images is added to all informational and functional images. Use
+                        empty alternative text, alt="" for decorative images, or include them in the CSS instead. Text
+                        alternatives are usually provided by those responsible for written content – if, for example, an
+                        image is used;
+
+                        Decorative images, such as images used in design for purely decorative purposes, images that
+                        are used as decoration to a text link, images that are described by adjacent text, or the ‘eye
+                        candy’ images do not need a description in alt tag – therefore, alt=””. Such examples are the
+                        image of a sleeping dog next to a text saying ‘The sleeping dog. The proverb says: ‘let the
+                        sleeping dogs lie’.”. Eye candy, or the ambiance images are, for example, the image of sea and
+                        waves on the website of surf-renting equipment – purely decorative.
+                        Functional images are used to initiate actions rather than to convey information. They are used
+                        in buttons, links, and other interactive elements. The text alternative for the image should
+                        convey the action that will be initiated (the purpose of the image), rather than a description of
+                        the image – for example, a print icon should have alt=’print’, instead of an image of a printer. In
+                        our webcast, company’s logo in the upper left corner was wrapped in a tag and marked by
+                        alt=”new tab”, whereas the aria-label instructed the user about functionality and purpose.
+                    </p>
+                    <h4 id="aria" class="text-card__title">ARIA</h4>
+                    <p class="text-card__text">
+                        Accessibility is greatly improved by ARIA set of rules and attributes, some of it already
+                        mentioned up in the previous examples. ARIA supplements HTML so that interactions and
+                        widgets commonly used in applications can be passed to assistive technologies when there is
+                        not otherwise a mechanism. For example, ARIA enables accessible JavaScript widgets, form
+                        hints and error messages, live content updates, and more.
+                        We have mostly used aria-label=”” and aria-labelledby=”” to enable assistive technologies to
+
+                        access parts of our website. Using the expandable lists in the language select menu, aria-
+                        expanded attribute came in handy, as it provided the users with assistive technologies a way to
+
+                        know that menu element was expanded and currently active, receiving focus. As mentioned,
+                        aria-role=”presentation” can be an alternative in the presentation of decorative images,
+                    </p>
+                    <h4 id="keyboard" class="text-card__title">keyboard accessibility</h4>
+                    <p class="text-card__text">
+                        By default, only the interactive elements of a website or application are keyboard-accessible get
+                        focused when using TAB key. With the tabindex, authors can make other elements focusable, too.
+                        When set to 0, the element becomes focusable by keyboard and script. When set to -1, the
+                        element becomes focusable by script, but it does not become part of the keyboard focus order.
+                        The order in which elements gain focus when using a keyboard, is the source order by default.
+                        In exceptional circumstances, we may want to redefine the order. To do this, we can set
+                        tabindex to any positive number. In the case of our main webcast page, we used the
+                        tabindex=”0”, for users to access elements in the source order. On the login page, it made more
+                        sense for user to be able to access login form first. To avoid having keyboard user tab through
+                        customer-defined content, we set tabindex=”1”; this allowed for user to navigate to content
+                        optionally, after reaching the login form first.
+                        To allow the user access the content such as polls, where the vote is selected and placed, JS
+                        was used to loop through HTML elements, assigning it tabindex and aria-role=”button”
+                        attributes. This way, poll was dynamically expanded to be reachable by keyboard. To visually
+                        emphasize that the element has received keyboard focus, an event listener listening to focus
+                        event was added.
+                    </p>
+                    <h5>keyboard traps</h5>
+                    <p class="text-card__text">
+                        If a keyboard user is stuck within a component, with no means to exit the component focus with
+                        a standard keyboard only and continue on to other interactive elements, it is called keyboard
+                        trap.
+                        When developing the player demo page, we used the external code editor widget to enable
+                        users to customize player methods and get a better overview of its capabilities. However, the
+                        code editor itself allowed for a keyboard trap – as user would tab into area to edit the code, they
+                        could not exit the editor unless using the mouse. Because of that, we wrote the following
+                        function using .focus() and .blur() methods:
+                        editor.on('focus', function () {
+                        let aceCont = document.querySelector('.config__editor')
+                        var textArea = aceCont.getElementsByTagName('textarea')[0]
+                        textArea.setAttribute('aria-label', 'Press Ctrl + m to exit the code editor')
+                        if (editor.isFocused() === true) {
+                        aceContainer.addEventListener('keydown', function (event: KeyboardEvent) {
+                        if (event.ctrlKey && event.key == 'm') {
+                        editor.blur()
+                        }
+                        })
+                        }
+                        })
+
+                        Simple – when the editor element has received focus, an event listener was added that would
+                        allow the user to press Ctrl + m key and blur the element, that is, to remove focus from the
+                        current HTML element - in this case, editor. We searched for textarea HTML element and
+                        assigned aria-label = “Press Ctrl + m to exit the code editor” to it, in order for the users to understand
+                        how to avoid keyboard trap.
+                    </p>
+                </div>
+
+                <div class="development__list">
+                    <a href="#lang">page language and changes</a>
+                    <a href="#title">title</a>
+                    <a href="#markup">markup</a>
+                    <a href="#form">form control</a>
+                    <a href="#buttons">buttons</a>
+                    <a href="#images">images</a>
+                    <a href="#aria">ARIA</a>
+                    <a href="#keyboard">keyboard accessibility</a>
+                </div>
+
+                <div class="development__code">
+
+                </div>
+                
+            </section>
+        </main>
+        <button id="widget-btn" class="widget-btn nav__list--btn">
+            <img src="./src/a11y.png" alt="widget"/>
+        </button>
+        <aside id="widget" class="widget hidden">
+            <button id="widget-font">change font size</button>
+            <div class="widget__font-size hidden">
+                <button id="decrement">&minus;</button>
+                <p>font size</p>
+                <button id="increment">&plus;</buttton>
+            </div>
+            <button id="widget-line">change line height</button>
+            <div class="widget__line-height hidden">
+                <button id="decrement">&minus;</button>
+                <p>line spacing</p>
+                <button id="increment">&plus;</buttton>
+            </div>
+            <button id="widget-color">change colors</button>
+            <div class="widget__color hidden">
+                <button>&minus;</button>
+                <p>color</p>
+                <button>&plus;</buttton>
+            </div>
+        </aside>
+        <footer>
+            this is a footer
+        </footer>
+        <script src="index.js" async defer></script>
+    </body>
+</html>
