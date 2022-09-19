@@ -186,3 +186,15 @@ footer {
     height: 5vh;
     background-color: rgb(46, 150, 17);
 }
+
+@media(max-width: 40rem) {
+    section {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .sources-card {
+        display: none;
+    }
+}
